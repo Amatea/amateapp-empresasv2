@@ -2,8 +2,8 @@
 'use strict';
 
 
-var	user = require('../../app/controllers/huellaController'),
-passport = require('passport');
+var	user = require('../../app/controllers/huellaController');
+var passport = require('passport');
 
 
 module.exports = function(app) {
