@@ -11,9 +11,7 @@ module.exports = function() {
 	mongoose.Promise = global.Promise;
 	var db = mongoose.connect(config.db);
 
-    // Cargar el modelo 'Article'
 	require('../app/models/huellaConection');
 
-	// Devolver la instancia de conexión a Mongoose
 	return db;
 };
