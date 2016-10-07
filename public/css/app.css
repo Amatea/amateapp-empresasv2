@@ -1,0 +1,74 @@
+
+
+
+h2 { color: #009688; }
+
+hr {
+  margin-top: 30px;
+}
+
+.iphone {
+  max-width: 80%;
+}
+
+.logo {
+  width: 180px;
+  margin: 9px;
+}
+
+.login-box {
+  margin-top: 30px;
+}
+.input-box {
+  margin-top: 40px;
+}
+.boton-box {
+  margin-top: 20px;
+}
+
+.arboles-card {
+  font-size: 44px;
+  margin-top: 10px;
+}
+
+.ecojornadas { 
+  text-align: right; 
+}
+
+.EcoDesafio-card {
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.campanas-content {background: #E0F2F1;}
+
+.compensa-container { text-align: center; }
+
+.compensa-titulo { color: #004D40; }
+
+.usuario-compensa { 
+  margin-right: 10px;
+  text-align: center;
+ }
+
+.compensa-nombre { 
+  margin: 0px;
+}
+
+.compensa-ico { 
+  margin: 2px; 
+  color: #009688;
+}
+
+.leaftlet-container { margin: 0px; border: solid red 1px; }
+
+footer { 
+  background:  #009688;
+  margin: 0px;
+  color: white;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }

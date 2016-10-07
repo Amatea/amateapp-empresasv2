@@ -1,0 +1,18 @@
+<md-toolbar layout="row">
+  <div layout-margin flex>
+    <img class="apple_icon" src="icono.png" />
+  </div>
+  <md-menu>
+    <md-button aria-label="Open demo menu" ng-click="$mdOpenMenu($event)" class="md-icon-button" aria-label="More">
+      <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+    </md-button>
+    <md-menu-content>
+      <md-menu-item>
+        <a><md-button ng-click="inicio()"><i class="fa fa-sign-in" aria-hidden="true"></i></i> Inicio</md-button></a>
+      </md-menu-item>
+      <md-menu-item>
+        <a href="/signout"><md-button><i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar Sesion</md-button></a>
+      </md-menu-item>
+    </md-menu-content>
+  </md-menu>
+</md-toolbar>
