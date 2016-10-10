@@ -44,6 +44,9 @@ App.config(['$locationProvider', '$routeProvider',
     .when('/profile', {
       		templateUrl: 'partials/profile.html'
    		 })
+    .when('/siembras', {
+      		templateUrl: 'partials/siembras.html'
+   		 })
     .when('/articles/transporte/:articleId', {
 			templateUrl: 'partials/transporte.html'
 		  }).

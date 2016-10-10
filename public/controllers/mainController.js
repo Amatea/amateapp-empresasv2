@@ -5,6 +5,10 @@ angular.module('huellas')
     $scope.authentication = Authentication;
 }])
 
+.controller('huellatoolController', ['$scope', function($scope) {
+  $scope.url = '#!/siembras'
+}])
+
 .controller('mapController', [ '$scope', function($scope) {
     angular.extend($scope, {
                 yanaconas: {

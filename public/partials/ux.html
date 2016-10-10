@@ -1,9 +1,6 @@
-<section ng-controller="mapController">
-  <md-toolbar>
-    <img class="logo" src="img/logo.png" alt="logo">
-    <a href="/signout">salir</a>
-  </md-toolbar>
-  <md-content class="campanas-content" layout="column">
+<section>
+  <toolbar></toolbar>
+  <section>
     <section layout-margin layout="row">
       <h2 flex><i class="fa fa-paw" aria-hidden="true"></i> Campañas Ecológicas::</h2>
       <div class="ecojornadas">
@@ -11,7 +8,7 @@
         <span>EcoJornadas</span>
       </div>
     </section>
-    <div class="compensa-container" layout="row" layout-xs="column">
+    <section class="compensa-container" layout="row" layout-xs="column">
       <section class="EcoDesafio-card" layout-margin flex>
         <h2><i class="fa fa-paw" aria-hidden="true"></i> EcoDesafío::</h2>
         <section layout-align="center center" layout="row">
@@ -65,73 +62,67 @@
           <p>¿Cuántos árboles debo sembrar este año?</p>
         </section>
       </section>
-    </div>
-  </md-content>
-  <md-toolbar class="md-warn">
-    <div class="md-toolbar-tools">
-      <h1>
-        <span>Huella Ecológica</span>
-      </h1>
-      <md-button class="huella-boton" aria-label="Settings">
-        Captura CO2
-      </md-button>
-      <span flex></span>
-      <md-button class="huella-boton" aria-label="Favorite">
-        Siembras
-      </md-button>
-    </div>
-  </md-toolbar>
-  <md-content layout-margin>
-    <h1><i class="material-icons">&#xE2BD;</i> Captura de CO2</h1>
-    <chart></chart>
-  </md-content>
-  <md-content class="md-padding" layout-xs="column" layout="row">
-  <md-card >
-      <md-card-title>
-        <md-card-title-text>
-          <span class="md-headline">Árboles Sembrados ::</span>
-          <span class="md-subhead">Nombre Compañia</span>
-          <span class="arboles-card"><i class="fa fa-pagelines" aria-hidden="true"></i> 2.560</span>
-          <span class="md-subhead">Árboles</span>
+    </section>
+  </section>
+  <section>
+    <md-toolbar ng-controller="huellatoolController" class="md-warn">
+      <div class="md-toolbar-tools">
+        <h1>
+          <span>Huella Ecológica</span>
+        </h1>
+        <span flex></span>
+        <md-button class="huella-boton" aria-label="Settings">
+          Captura CO2
+        </md-button>
+        <md-button ng-href="{{url}}" class="huella-boton" aria-label="Favorite">
+          Siembras
+        </md-button>
+      </div>
+    </md-toolbar>
+    <section layout-margin>
+      <h2><i class="material-icons">&#xE2BD;</i> Captura de CO2</h2>
+      <chart></chart>
+    </section>
+    <section class="md-padding" layout-xs="column" layout="row">
+    <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Árboles Sembrados ::</span>
+            <span class="md-subhead">Nombre Compañia</span>
+            <span class="arboles-card"><i class="fa fa-pagelines" aria-hidden="true"></i> 2.560</span>
+            <span class="md-subhead">Árboles</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-lg card-media"><img src="img/siembra-card.jpeg" alt=""></div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row">
+          <md-button class="md-hue-2">Especies Sembradas</md-button>
+          <md-button>Action 2</md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Captura de CO2 ::</span>
+            <span class="md-subhead">Nombre Compañia</span>
+            <span class="arboles-card"><i class="fa fa-car" aria-hidden="true"></i> 1.500</span>
+            <span class="md-subhead">Ton / CO2</span>
         </md-card-title-text>
         <md-card-title-media>
-          <div class="md-media-lg card-media"><img src="img/siembra-card.jpeg" alt=""></div>
+          <div class="md-media-lg card-media"><img src="img/carbono-card.jpeg" alt=""></div>
         </md-card-title-media>
-      </md-card-title>
-      <md-card-actions layout="row">
-        <md-button class="md-hue-2">Especies Sembradas</md-button>
-        <md-button>Action 2</md-button>
-      </md-card-actions>
-    </md-card>
-    <md-card>
-      <md-card-title>
-        <md-card-title-text>
-          <span class="md-headline">Captura de CO2 ::</span>
-          <span class="md-subhead">Nombre Compañia</span>
-          <span class="arboles-card"><i class="fa fa-car" aria-hidden="true"></i> 1.500</span>
-          <span class="md-subhead">Ton / CO2</span>
-      </md-card-title-text>
-      <md-card-title-media>
-        <div class="md-media-lg card-media"><img src="img/carbono-card.jpeg" alt=""></div>
-      </md-card-title-media>
-      </md-card-title>
-      <md-card-actions layout="row" layout-align="end center">
-        <md-button>Action 1</md-button>
-        <md-button>Action 2</md-button>
-      </md-card-actions>
-    </md-card>
-  </md-content>
-  <md-conten class="mapa-content">
-    <h1 layout-margin><i class="material-icons md-36">add_location</i>Mapa de Siembras</h1>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button>Action 1</md-button>
+          <md-button>Action 2</md-button>
+        </md-card-actions>
+      </md-card>
+    </section>
+  </section>
+  <section ng-controller="mapController" class="mapa-content">
+    <h2 layout-margin><i class="material-icons md-36">add_location</i>Mapa de Siembras</h2>
     <leaflet center="yanaconas" markers="mapMarkers"  defaults="defaults" width="100%" height="480"></leaflet>
-  </md-conten>
-  
+  </section>
 </section>
-<footer layout.margin>
-    <section>
-      <p>Con el apoyo de: Parques Nacionales Naturales</p>
-    </section>
-    <section>
-      <p>amateapp © 2016</p>
-    </section>
-</footer>
+<footer layout.margin></footer>

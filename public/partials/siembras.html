@@ -1,0 +1,18 @@
+<toolbar></toolbar>
+<section>
+  <section>
+    <md-button>Jornadas</md-button>
+  </section>
+  <section ng-controller="chartController">
+    <canvas 
+      id="line" 
+      class="chart chart-bar" 
+      chart-data="data" 
+      chart-labels="labels" 
+      chart-series="series" 
+      chart-options="options" 
+      chart-dataset-override="datasetOverride" 
+      chart-click="onClick">
+    </canvas> 
+</section>
+</section>

@@ -1,10 +1,10 @@
 
+
+
+h2 { color: #009688; }
+
 hr {
   margin-top: 30px;
-}
-
-.huella-boton {
-  border: solid white 1px;
 }
 
 .iphone {
@@ -15,7 +15,9 @@ hr {
   width: 180px;
   margin: 9px;
 }
-
+.huella-boton{
+  border: solid 1px white;
+}
 .login-box {
   margin-top: 30px;
 }
