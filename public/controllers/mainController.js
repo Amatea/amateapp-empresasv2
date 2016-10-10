@@ -6,7 +6,7 @@ angular.module('huellas')
 }])
 
 .controller('huellatoolController', ['$scope', function($scope) {
-  $scope.url = '#!/siembras'
+  $scope.url = '#!/siembras';
 }])
 
 .controller('mapController', [ '$scope', function($scope) {
@@ -32,6 +32,32 @@ angular.module('huellas')
       $scope.data = [
         [15, 14, 14, 15, 14, 14, 14],
         [14, 13, 12, 15, 14, 13, 14]
+      ];
+      $scope.onClick = function (points, evt) {
+        console.log(points, evt);
+      };
+      $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }];
+      $scope.options = {
+        scales: {
+          yAxes: [
+            {
+              id: 'y-axis-1',
+              type: 'linear',
+              display: true,
+              position: 'left'
+            }
+          ]
+        }
+      };
+
+}])
+
+.controller('chartsiembraController', ['$scope',
+    function($scope) {
+      $scope.labels = ["Sangredago", "Jigua amarillo", "Mortiño", "Nacedero", "Otobo", "Cargadero", "Palmiche", 'yarumo'];
+      $scope.series = ['Árboles'];
+      $scope.data = [
+        [230, 145, 56, 15, 14, 14, 125, 220],
       ];
       $scope.onClick = function (points, evt) {
         console.log(points, evt);

@@ -34,7 +34,7 @@
         </div>
       </section>
       <section class="compensa-container" layout-margin flex>
-        <h2 class="compensa-titulo"><i class="fa fa-paw" aria-hidden="true"></i> Compensa tu Huella ::</h2>
+        <h2><i class="fa fa-paw" aria-hidden="true"></i> Compensa tu Huella ::</h2>
         <section layout-align="center center" layout="row">
           <div class="usuario-compensa">
             <a  href=""><i class="material-icons md-48">account_circle</i></i></a>
@@ -65,10 +65,10 @@
     </section>
   </section>
   <section>
-    <md-toolbar ng-controller="huellatoolController" class="md-warn">
+    <md-toolbar ng-controller="huellatoolController">
       <div class="md-toolbar-tools">
         <h1>
-          <span>Huella Ecológica</span>
+          <span><i class="fa fa-paw" aria-hidden="true"></i> Somos Huella Somos Eco</span>
         </h1>
         <span flex></span>
         <md-button class="huella-boton" aria-label="Settings">
@@ -79,46 +79,7 @@
         </md-button>
       </div>
     </md-toolbar>
-    <section layout-margin>
-      <h2><i class="material-icons">&#xE2BD;</i> Captura de CO2</h2>
-      <chart></chart>
-    </section>
-    <section class="md-padding" layout-xs="column" layout="row">
-    <md-card>
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">Árboles Sembrados ::</span>
-            <span class="md-subhead">Nombre Compañia</span>
-            <span class="arboles-card"><i class="fa fa-pagelines" aria-hidden="true"></i> 2.560</span>
-            <span class="md-subhead">Árboles</span>
-          </md-card-title-text>
-          <md-card-title-media>
-            <div class="md-media-lg card-media"><img src="img/siembra-card.jpeg" alt=""></div>
-          </md-card-title-media>
-        </md-card-title>
-        <md-card-actions layout="row">
-          <md-button class="md-hue-2">Especies Sembradas</md-button>
-          <md-button>Action 2</md-button>
-        </md-card-actions>
-      </md-card>
-      <md-card>
-        <md-card-title>
-          <md-card-title-text>
-            <span class="md-headline">Captura de CO2 ::</span>
-            <span class="md-subhead">Nombre Compañia</span>
-            <span class="arboles-card"><i class="fa fa-car" aria-hidden="true"></i> 1.500</span>
-            <span class="md-subhead">Ton / CO2</span>
-        </md-card-title-text>
-        <md-card-title-media>
-          <div class="md-media-lg card-media"><img src="img/carbono-card.jpeg" alt=""></div>
-        </md-card-title-media>
-        </md-card-title>
-        <md-card-actions layout="row" layout-align="end center">
-          <md-button>Action 1</md-button>
-          <md-button>Action 2</md-button>
-        </md-card-actions>
-      </md-card>
-    </section>
+    <gestion></gestion>
   </section>
   <section ng-controller="mapController" class="mapa-content">
     <h2 layout-margin><i class="material-icons md-36">add_location</i>Mapa de Siembras</h2>

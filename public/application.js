@@ -8,7 +8,6 @@ var App = angular.module('App', [
   'leaflet-directive',
   'chart.js',
   'angularMoment'
-  
   ]);
 
 App.factory('Authentication', [

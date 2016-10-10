@@ -7,6 +7,14 @@ angular.module('huellas')
 		};
 	})
 
+.directive('gestion', function() {
+		return {
+			restrict: 'E',
+			templateUrl: '/partials/gestion.html',
+		};
+	})
+	
+
 .directive('footer', function() {
 		return {
 			restrict: 'E',
@@ -25,5 +33,12 @@ angular.module('huellas')
 		return {
 			restrict: 'E',
 			templateUrl: '/partials/chart.html',
+		};
+})
+
+.directive('chartsiembra', function() {
+		return {
+			restrict: 'E',
+			templateUrl: '/partials/chart-siembra.html',
 		};
 })

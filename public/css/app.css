@@ -38,15 +38,14 @@ hr {
 }
 
 .EcoDesafio-card {
-  border: 1px solid white;
+  border: 1px solid #009688;
   border-radius: 10px;
 }
 
-.campanas-content {background: #E0F2F1;}
+.campanas-content {background: #009688;}
 
 .compensa-container { text-align: center; }
 
-.compensa-titulo { color: #004D40; }
 
 .usuario-compensa { 
   margin-right: 10px;
@@ -74,3 +73,4 @@ footer {
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }
 .material-icons.md-48 { font-size: 48px; }
+
