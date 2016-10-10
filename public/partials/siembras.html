@@ -1,8 +1,17 @@
 <toolbar></toolbar>
-<section>
+<section ng-controller="siembrasController">
   <section>
+    <md-button ng-model="template">Especies Sembradas</md-button>
     <md-button>Jornadas</md-button>
   </section>
+  <select ng-model="template" ng-options="t.name for t in templates">
+   <option value="">(blank)</option>
+  </select>
+  url of the template: <code>{{template.url}}</code>
+  <hr/>
+  <div >
+    <div  ng-include="template.url"></div>
+  </div>
   <section ng-controller="chartController">
     <canvas 
       id="line" 
