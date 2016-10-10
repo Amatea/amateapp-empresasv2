@@ -23,13 +23,14 @@ App.factory('Authentication', [
 
 App.config(['$mdThemingProvider',
   function( $mdThemingProvider) {
-    
     $mdThemingProvider.theme('default')
       .primaryPalette('teal', {
         'default': '500',
-        'hue-1': '700'
+        'hue-1': '700',
+        'hue-2': 'A700'
       })
-      .accentPalette('purple');
+      .accentPalette('purple')
+      .warnPalette('green');
   }
 ]);
 

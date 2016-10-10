@@ -3,6 +3,10 @@ hr {
   margin-top: 30px;
 }
 
+.huella-boton {
+  border: solid white 1px;
+}
+
 .iphone {
   max-width: 80%;
 }
