@@ -1,4 +1,5 @@
 var App = angular.module('App', [
+  'ui.router',
   'ngResource',
   'ngRoute', 
   'ngMaterial', 
@@ -34,39 +35,44 @@ App.config(['$mdThemingProvider',
   }
 ]);
 
-App.config(['$locationProvider', '$routeProvider',
-	function($locationProvider, $routeProvider) {
+
+
+App.config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     $locationProvider.hashPrefix('!');
-		$routeProvider
-    .when('/', {
-      		templateUrl: 'partials/inicio.html'
-   		 })
-    .when('/profile', {
-      		templateUrl: 'partials/profile.html'
-   		 })
-    .when('/siembras', {
-      		templateUrl: 'partials/siembras.html'
-   		 })
-    .when('/articles/transporte/:articleId', {
-			templateUrl: 'partials/transporte.html'
-		  }).
-		when('/arboles/', {
-			templateUrl: 'huella/views/arboles.html'
-		  }).
-		when('/articles/vida/:articleId', {
-			templateUrl: 'partials/vida.html'
-		  }).
-		when('/articles/consumo/:articleId', {
-			templateUrl: 'partials/consumo.html'
-		  }).
-		when('/articles/calculo/:articleId', {
-			templateUrl: 'partials/calculo-huella.html'
-	  	}).
-		when('/articles/edit/:articleId', {
-			templateUrl: 'partials/hogar.html'
-		  }).
-		otherwise({
-      		redirectTo: '/'
-    	});
-	}
-]);
+    $urlRouterProvider.otherwise('/');
+    
+    $stateProvider
+        
+        // HOME STATES AND NESTED VIEWS ========================================
+        
+        
+        // nested list with custom controller
+        .state('siembras', {
+            url: '/siembras',
+            templateUrl: '/partials/inicio.html',
+            controller: function($scope) {
+                $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
+            }
+        })
+        
+        // nested list with just some random string data
+        .state('home.paragraph', {
+            url: '/paragraph',
+            template: 'I could sure use a drink right now.'
+        })
+        
+        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+        .state('about', {
+            url: '/about',
+            views: {
+                '': { templateUrl: 'partial-about.html' },
+                'columnOne@about': { template: 'Look I am a column!' },
+                'columnTwo@about': { 
+                    templateUrl: 'table-data.html',
+                    controller: 'scotchController'
+                }
+            }
+            
+        });
+        
+});
