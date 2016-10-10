@@ -23,16 +23,16 @@ angular.module('huellas')
 
 .controller('chartController', ['$scope',
     function($scope) {
-      $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
-      $scope.series = ['Series A', 'Series B'];
+      $scope.labels = ["2014", "2015", "2016", "2107", "2018", "2019", "2020"];
+      $scope.series = ['Huella', 'Captura'];
       $scope.data = [
-        [65, 59, 80, 81, 56, 55, 40],
-        [28, 48, 40, 19, 86, 27, 90]
+        [15, 14, 14, 15, 14, 14, 14],
+        [14, 13, 12, 15, 14, 13, 14]
       ];
       $scope.onClick = function (points, evt) {
         console.log(points, evt);
       };
-      $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
+      $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }];
       $scope.options = {
         scales: {
           yAxes: [
@@ -41,12 +41,6 @@ angular.module('huellas')
               type: 'linear',
               display: true,
               position: 'left'
-            },
-            {
-              id: 'y-axis-2',
-              type: 'linear',
-              display: true,
-              position: 'right'
             }
           ]
         }
