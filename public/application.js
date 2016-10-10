@@ -21,9 +21,9 @@ App.factory('Authentication', [
   }
 ]);
 
-App.config(['$locationProvider', '$mdThemingProvider',
-  function($locationProvider, $mdThemingProvider) {
-    $locationProvider.hashPrefix('!');
+App.config(['$mdThemingProvider',
+  function( $mdThemingProvider) {
+    
     $mdThemingProvider.theme('default')
       .primaryPalette('teal', {
         'default': '500',
@@ -33,8 +33,9 @@ App.config(['$locationProvider', '$mdThemingProvider',
   }
 ]);
 
-App.config(['$routeProvider',
-	function($routeProvider) {
+App.config(['$locationProvider', '$routeProvider',
+	function($locationProvider, $routeProvider) {
+    $locationProvider.hashPrefix('!');
 		$routeProvider
     .when('/', {
       		templateUrl: 'partials/inicio.html'
