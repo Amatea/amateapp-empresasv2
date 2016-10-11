@@ -1,7 +1,7 @@
 <section>
   <toolbar></toolbar>
   <section>
-    <section layout-margin layout="row">
+    <section layout="row" layout-margin>
       <h2 flex><i class="fa fa-paw" aria-hidden="true"></i> Campañas Ecológicas::</h2>
       <div class="ecojornadas">
         <a href=""><i class="material-icons md-36">&#xE8A3;</i></a><br>
@@ -9,7 +9,7 @@
       </div>
     </section>
     <section class="compensa-container" layout="row" layout-xs="column">
-      <section class="EcoDesafio-card" layout-margin flex>
+      <section class="EcoDesafio-card" layout-margin flex-order-xs flex="auto">
         <h2><i class="fa fa-paw" aria-hidden="true"></i> EcoDesafío::</h2>
         <section layout-align="center center" layout="row">
           <div class="usuario-compensa">
@@ -33,7 +33,7 @@
           <h2>120</h2>
         </div>
       </section>
-      <section class="compensa-container" layout-margin flex>
+      <section class="compensa-container" layout-margin flex="auto">
         <h2><i class="fa fa-paw" aria-hidden="true"></i> Compensa tu Huella ::</h2>
         <section  layout-align="center center" layout="row">
           <div ng-repeat="u in users | limitTo: 5" class="usuario-compensa">
