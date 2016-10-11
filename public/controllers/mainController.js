@@ -7,6 +7,7 @@ angular.module('huellas')
 
 .controller('huellatoolController', ['$scope', function($scope) {
   $scope.url = '#!/siembras';
+  $scope.urlCuestionario = '#!/articles/edit/{{authentication.user._id}}'
 }])
 
 .controller('mapController', [ '$scope', function($scope) {

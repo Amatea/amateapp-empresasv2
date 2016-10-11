@@ -57,8 +57,8 @@
             <p class="compensa-ico"><i class="fa fa-pagelines" aria-hidden="true"></i> 2</p>
           </div>
         </section>
-        <section class="jornada">
-          <md-button class="md-raised md-primary">Conoce Tu Huella</md-button>
+        <section ng-controller="huellatoolController" class="jornada">
+          <md-button ng-href="{{urlCuestionario}}" class="md-raised md-primary">Conoce Tu Huella</md-button>
           <p>¿Cuántos árboles debo sembrar este año?</p>
         </section>
       </section>
