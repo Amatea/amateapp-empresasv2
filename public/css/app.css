@@ -7,8 +7,9 @@ hr {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  margin-right: 20px;
-  margin-top: 30px;
+ 
+  
+  background: #AB47BC;
 }
 .md-avatar {
   width: 52px;

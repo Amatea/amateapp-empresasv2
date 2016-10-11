@@ -35,26 +35,11 @@
       </section>
       <section class="compensa-container" layout-margin flex>
         <h2><i class="fa fa-paw" aria-hidden="true"></i> Compensa tu Huella ::</h2>
-        <section layout-align="center center" layout="row">
-          <div class="usuario-compensa">
-            <a  href=""><i class="material-icons md-48">account_circle</i></i></a>
-            <p class="compensa-nombre">Andres</p>
-            <p class="compensa-ico"><i class="fa fa-pagelines" aria-hidden="true"></i> 23</p>
-          </div>
-          <div class="usuario-compensa">
-            <a  href=""><i class="material-icons md-48">account_circle</i></i></a>
-            <p class="compensa-nombre">Tatina</p>
-            <p class="compensa-ico"><i class="fa fa-pagelines" aria-hidden="true"></i> 18</p>
-          </div>
-          <div class="usuario-compensa">
-            <a  href=""><i class="material-icons md-48">account_circle</i></i></a>
-            <p class="compensa-nombre">Uriel</p>
-            <p class="compensa-ico"><i class="fa fa-pagelines" aria-hidden="true"></i> 10</p>
-          </div>
-          <div class="usuario-compensa">
-            <a  href=""><i class="material-icons md-48">account_circle</i></i></a>
-            <p class="compensa-nombre">Ligia</p>
-            <p class="compensa-ico"><i class="fa fa-pagelines" aria-hidden="true"></i> 2</p>
+        <section  layout-align="center center" layout="row">
+          <div ng-repeat="u in users | limitTo: 5" class="usuario-compensa">
+            <a  href=""><img class="avatar" src="{{u.providerData.picture}}" alt=""></a>
+            <p class="compensa-nombre">{{u.firstName}}</p>
+            <p class="compensa-ico"><i class="fa fa-pagelines" aria-hidden="true"></i> {{u.totalTrees}}</p>
           </div>
         </section>
         <section ng-controller="huellatoolController" class="jornada">

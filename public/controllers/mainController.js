@@ -1,9 +1,13 @@
 angular.module('huellas')
 
 .controller('ExampleController', ['$scope', 'Authentication', '$window', 'Articles',
-  function($scope, Authentication, $window) {
+  function($scope, Authentication, $window, Articles) {
     $scope.authentication = Authentication;
 
+    $scope.users = Articles.query(function(dato){
+      console.log(dato);
+    });
+      
 
 }])
 

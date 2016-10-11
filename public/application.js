@@ -50,23 +50,23 @@ App.config(['$locationProvider', '$routeProvider',
    		 })
     .when('/articles/transporte/:userId', {
 			templateUrl: 'partials/transporte.html'
-		  }).
-		when('/arboles/', {
+		  })
+		.when('/arboles/', {
 			templateUrl: 'huella/views/arboles.html'
-		  }).
-		when('/articles/vida/:userId', {
+		  })
+		.when('/articles/vida/:userId', {
 			templateUrl: 'partials/vida.html'
-		  }).
-		when('/articles/consumo/:userId', {
+		  })
+		.when('/articles/consumo/:userId', {
 			templateUrl: 'partials/consumo.html'
-		  }).
-		when('/articles/calculo/:userId', {
+		  })
+		.when('/articles/calculo/:userId', {
 			templateUrl: 'partials/calculo-huella.html'
-	  	}).
-		when('/articles/edit/:userId', {
+	  	})
+		.when('/articles/edit/:userId', {
 			templateUrl: 'partials/hogar.html'
-		  }).
-		otherwise({
+		  })
+		.otherwise({
       		redirectTo: '/'
     	});
 	}

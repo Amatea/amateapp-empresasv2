@@ -45,7 +45,7 @@ var UserSchema = new Schema({
   },
   providerId: String,
   providerData: {
-    picture: { type: String, default: 'avatar.jpg'}
+    picture: { type: String, default: 'img/account.svg'}
   },
   created: {
     type: Date,
