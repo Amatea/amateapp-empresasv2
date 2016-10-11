@@ -12,7 +12,7 @@ angular.module('huellas')
         $scope.findOne = function() {
             
             $scope.article = Articles.get({
-                articleId: $routeParams.articleId
+                userId: $routeParams.userId
             });
         };
 

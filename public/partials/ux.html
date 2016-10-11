@@ -58,7 +58,9 @@
           </div>
         </section>
         <section ng-controller="huellatoolController" class="jornada">
-          <md-button ng-href="{{urlCuestionario}}" class="md-raised md-primary">Conoce Tu Huella</md-button>
+          <a href="/#!/articles/edit/{{authentication.user._id}}">
+            <md-button class="md-raised md-primary">Conoce Tu Huella</md-button>
+          </a>
           <p>¿Cuántos árboles debo sembrar este año?</p>
         </section>
       </section>

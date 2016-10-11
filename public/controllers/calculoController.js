@@ -14,7 +14,7 @@ angular.module('huellas')
     
     $scope.findOne = [
       $scope.article = Articles.get({
-          articleId: $routeParams.articleId
+          userId: $routeParams.userId
         })
       ];
 
@@ -90,7 +90,7 @@ angular.module('huellas')
     $scope.article = article;
 
     $scope.article = Articles.get({
-              articleId: $routeParams.articleId
+              userId: $routeParams.userId
             })
       
         $scope.addArbol = function() {

@@ -48,22 +48,22 @@ App.config(['$locationProvider', '$routeProvider',
     .when('/siembras', {
       		templateUrl: 'partials/siembras.html'
    		 })
-    .when('/articles/transporte/:articleId', {
+    .when('/articles/transporte/:userId', {
 			templateUrl: 'partials/transporte.html'
 		  }).
 		when('/arboles/', {
 			templateUrl: 'huella/views/arboles.html'
 		  }).
-		when('/articles/vida/:articleId', {
+		when('/articles/vida/:userId', {
 			templateUrl: 'partials/vida.html'
 		  }).
-		when('/articles/consumo/:articleId', {
+		when('/articles/consumo/:userId', {
 			templateUrl: 'partials/consumo.html'
 		  }).
-		when('/articles/calculo/:articleId', {
+		when('/articles/calculo/:userId', {
 			templateUrl: 'partials/calculo-huella.html'
 	  	}).
-		when('/articles/edit/:articleId', {
+		when('/articles/edit/:userId', {
 			templateUrl: 'partials/hogar.html'
 		  }).
 		otherwise({

@@ -9,16 +9,14 @@ var passport = require('passport');
 module.exports = function(app) {
 	
   app.get('/', user.render);
-
-	app.route('/api')
+	
+  app.route('/api/articles')
 	   .get(user.list)
 	   .post(user.create);
 	
-	
-	app.route('/api/:userId')
+	app.route('/api/articles/:userId')
 	   .get(user.read)
 	   .put(user.update)
-	
 	
 	app.param('userId', user.userByID);
 

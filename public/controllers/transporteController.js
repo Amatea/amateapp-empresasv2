@@ -9,7 +9,7 @@ angular.module('huellas').controller('transporteController', ['$scope', '$routeP
   
         $scope.findOne = function() {
             $scope.article = Articles.get({
-                articleId: $routeParams.articleId
+                userId: $routeParams.userId
             });
         };
 

@@ -99,7 +99,7 @@ exports.render = function(req, res) {
 
 exports.userByID = function(req, res, next, id) {
 
-	User.findById(id).populate('creador', 'firstName lastName fullName').exec(function(err, article) {
+	User.findById(id).populate('creador', 'firstName lastName fullName').exec(function(err, user) {
 		if (err) return next(err);
 		if (!user) return next(new Error('Fallo al cargar el artículo ' + id));
 

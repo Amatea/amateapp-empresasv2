@@ -11,13 +11,13 @@ angular.module('huellas')
 
         $scope.findOne = function() {
             $scope.article = Articles.get({
-                articleId: $routeParams.articleId
+                userId: $routeParams.userId
             });
         };
 
         $scope.update = function() {
             $scope.article.$update(function() {
-                $location.path('articles/calculo/' + $routeParams.articleId);
+                $location.path('articles/calculo/' + $routeParams.userId);
             }, function(errorResponse) {
                 $scope.error = errorResponse.data.message;
             });
