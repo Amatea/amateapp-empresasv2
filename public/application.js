@@ -42,7 +42,7 @@ App.config(['$locationProvider', '$routeProvider',
     .when('/', {
       		templateUrl: 'partials/inicio.html'
    		 })
-    .when('/profile', {
+    .when('/profile/:userId', {
       		templateUrl: 'partials/profile.html'
    		 })
     .when('/siembras', {
