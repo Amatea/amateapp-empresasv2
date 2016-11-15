@@ -7,7 +7,8 @@ var App = angular.module('App', [
   'huellas',
   'leaflet-directive',
   'chart.js',
-  'angularMoment'
+  'angularMoment',
+  'jkAngularCarousel'
   ]);
 
 App.factory('Authentication', [
@@ -47,6 +48,12 @@ App.config(['$locationProvider', '$routeProvider',
    		 })
     .when('/siembras', {
       		templateUrl: 'partials/siembras.html'
+   		 })
+    .when('/galeria', {
+      		templateUrl: 'partials/galeria.html'
+   		 })
+    .when('/galeria2015', {
+      		templateUrl: 'partials/galeria2015.html'
    		 })
     .when('/articles/transporte/:userId', {
 			templateUrl: 'partials/transporte.html'

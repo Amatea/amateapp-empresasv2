@@ -18,9 +18,9 @@ angular.module('huellas')
 .controller('mapController', [ '$scope', function($scope) {
     angular.extend($scope, {
                 yanaconas: {
-                    lat: 3.423004,
-                    lng: -76.606897,
-                    zoom: 15
+                    lat: 3.6315515417373687,
+                    lng: -76.50981903076172,
+                    zoom: 13
                 },
                 defaults: {
                     zoomAnimation: false,
@@ -31,55 +31,99 @@ angular.module('huellas')
             });
 }])
 
-.controller('chartController', ['$scope',
-    function($scope) {
-      $scope.labels = ["2014", "2015", "2016", "2107", "2018", "2019", "2020"];
-      $scope.series = ['Huella', 'Captura'];
-      $scope.data = [
-        [15, 14, 14, 15, 14, 14, 14],
-        [14, 13, 12, 15, 14, 13, 14]
-      ];
-      $scope.onClick = function (points, evt) {
-        console.log(points, evt);
-      };
-      $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }];
-      $scope.options = {
-        scales: {
-          yAxes: [
-            {
-              id: 'y-axis-1',
-              type: 'linear',
-              display: true,
-              position: 'left'
-            }
-          ]
-        }
-      };
+.controller('GalleryCtrl', function ($scope) {
 
-}])
+    $scope.dataArray = [
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2015/1.jpg'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2015/2.jpg'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2015/3.jpg'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2015/4.jpg'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2015/5.jpg'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2015/6.jpg'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2015/7.jpg'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2015/8.jpg'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2015/9.jpg'
+      }
+    ];
 
-.controller('chartsiembraController', ['$scope',
-    function($scope) {
-      $scope.labels = ["Sangredago", "Jigua amarillo", "Mortiño", "Nacedero", "Otobo", "Cargadero", "Palmiche", 'yarumo'];
-      $scope.series = ['Árboles'];
-      $scope.data = [
-        [230, 145, 56, 15, 14, 14, 125, 220],
-      ];
-      $scope.onClick = function (points, evt) {
-        console.log(points, evt);
-      };
-      $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }];
-      $scope.options = {
-        scales: {
-          yAxes: [
-            {
-              id: 'y-axis-1',
-              type: 'linear',
-              display: true,
-              position: 'left'
-            }
-          ]
-        }
-      };
+     $scope.dataArray2015 = [
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/1a.JPG'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/2.jpg'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/3.JPG'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/4.JPG'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/5.JPG'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/6.JPG'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/7.JPG'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/8.JPG'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/9.JPG'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/10.JPG'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/11.JPG'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/12.JPG'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/13.JPG'
+      },
+      {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/14.jpg'
+      },
+       {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/15.JPG'
+      },
+       {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/16.JPG'
+      },
+       {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/17.JPG'
+      },
+       {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/18.JPG'
+      },
+       {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/19.JPG'
+      },
+       {
+        src: 'https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/20.JPG'
+      }
 
-}]);
+    ];
+})

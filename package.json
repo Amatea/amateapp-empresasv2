@@ -19,6 +19,7 @@
   },
   "homepage": "https://amateapp-empresas.com",
   "dependencies": {
+    "angular-material-advanced-lightbox": "^0.1.1",
     "angular-moment": "^1.0.0-beta.6",
     "body-parser": "~1.8.0",
     "compression": "~1.0.11",

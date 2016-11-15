@@ -9,8 +9,8 @@
             <md-card-title>
               <md-card-title-text>
                 <span class="md-headline">Captura de CO2 ::</span>
-                <span class="md-subhead">Nombre Compañia</span>
-                <span class="arboles-card"><i class="fa fa-car" aria-hidden="true"></i> 1.500</span>
+                <span class="md-subhead">Sidoc</span>
+                <span class="arboles-card"><i class="fa fa-car" aria-hidden="true"></i> 784</span>
                 <span class="md-subhead">Ton / CO2</span>
             </md-card-title-text>
             <md-card-title-media>
@@ -18,34 +18,88 @@
             </md-card-title-media>
             </md-card-title>
             <md-card-actions layout="row" layout-align="end center">
-              <md-button>Action 1</md-button>
-              <md-button>Action 2</md-button>
+             
             </md-card-actions>
           </md-card>
         </md-content>
       </md-tab>
 
       <md-tab label="Siembras">
+        <md-tabs md-dynamic-height md-border-bottom>
+          <md-tab label="Consolidado">
+            <md-content class="md-padding">
+              <chartsiembra></chartsiembra>
+              <h2><i class="material-icons">&#xE2BD;</i> Árboles Sembrados</h2>
+          
+              <md-card ng-controller="datoCardController">
+                <md-card-title>
+                  <md-card-title-text>
+                    <span class="md-headline">Árboles Sembrados ::</span>
+                    <span class="md-subhead">SIDOC</span>
+                    <span class="arboles-card"><i class="fa fa-pagelines" aria-hidden="true"></i> {{totalconsolidado}}</span>
+                    <span class="md-subhead">Árboles</span>
+                  </md-card-title-text>
+                  <md-card-title-media>
+                    <div class="md-media-lg card-media"><img src="https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/8.JPG" alt=""></div>
+                  </md-card-title-media>
+                </md-card-title>
+                <md-card-actions layout="row">
+                  <md-button class="md-hue-2">Especies Sembradas</md-button>
+                </md-card-actions>
+              </md-card>
+
+            </md-content>
+          </md-tab>
+          <md-tab label="2015">
+            <md-content class="md-padding">
+              <chartsiembra2015></chartsiembra2015>
+              <h2><i class="material-icons">&#xE2BD;</i> Árboles Sembrados</h2>
+          
+              <md-card ng-controller="datoCardController">
+                <md-card-title>
+                  <md-card-title-text>
+                    <span class="md-headline">Árboles Sembrados ::</span>
+                    <span class="md-subhead">SIDOC</span>
+                    <span class="arboles-card"><i class="fa fa-pagelines" aria-hidden="true"></i> {{total2015}}</span>
+                    <span class="md-subhead">Árboles</span>
+                  </md-card-title-text>
+                  <md-card-title-media>
+                    <div class="md-media-lg card-media"><img src="https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/8.JPG" alt=""></div>
+                  </md-card-title-media>
+                </md-card-title>
+                <md-card-actions layout="row">
+                  <md-button ng-href="#!/galeria2015" class="md-accent md-raised md-hue-2"><i class="fa fa-picture-o" aria-hidden="true"></i> Galería de Imagenes</md-button>
+                </md-card-actions>
+              </md-card>
+            </md-content>
+
+          </md-tab>
+          <md-tab label="2016">
+            <md-content class="md-padding">
+              <chartsiembra2016></chartsiembra2016>
+              <h2><i class="material-icons">&#xE2BD;</i> Árboles Sembrados</h2>
+          
+              <md-card ng-controller="datoCardController">
+                <md-card-title>
+                  <md-card-title-text>
+                    <span class="md-headline">Árboles Sembrados ::</span>
+                    <span class="md-subhead">SIDOC</span>
+                    <span class="arboles-card"><i class="fa fa-pagelines" aria-hidden="true"></i> {{total2016}}</span>
+                    <span class="md-subhead">Árboles</span>
+                  </md-card-title-text>
+                  <md-card-title-media>
+                    <div class="md-media-lg card-media"><img src="https://s3-us-west-2.amazonaws.com/amateapp-empresas/sidoc/2014/8.JPG" alt=""></div>
+                  </md-card-title-media>
+                </md-card-title>
+                <md-card-actions layout="row">
+                  <md-button ng-href="#!/galeria" class="md-accent md-raised md-hue-2"><i class="fa fa-picture-o" aria-hidden="true"></i> Galería de Imagenes</md-button>
+                </md-card-actions>
+              </md-card>
+            </md-content>
+          </md-tab>
+        </md-tabs>
         <md-content class="md-padding">
-          <h2><i class="material-icons">&#xE2BD;</i> Árboles Sembrados</h2>
-          <chartsiembra></chartsiembra>
-          <md-card>
-            <md-card-title>
-              <md-card-title-text>
-                <span class="md-headline">Árboles Sembrados ::</span>
-                <span class="md-subhead">Nombre Compañia</span>
-                <span class="arboles-card"><i class="fa fa-pagelines" aria-hidden="true"></i> 2.560</span>
-                <span class="md-subhead">Árboles</span>
-              </md-card-title-text>
-              <md-card-title-media>
-                <div class="md-media-lg card-media"><img src="img/siembra-card.jpeg" alt=""></div>
-              </md-card-title-media>
-            </md-card-title>
-            <md-card-actions layout="row">
-              <md-button class="md-hue-2">Especies Sembradas</md-button>
-              <md-button>Action 2</md-button>
-            </md-card-actions>
-          </md-card>
+          
         </md-content>
       </md-tab>
 
@@ -53,13 +107,14 @@
         <md-content class="md-padding">
           <h2><i class="material-icons">&#xE2BD;</i> Jornadas Ecológicas</h2>
           <div>
-            No de Jornadas: 23
+            No de Jornadas: 0
           </div>
           <div>
-            No de Participantes: 144
+            No de Participantes: 0
           </div>
           <md-button class="md-accent">Galería de Imagenes</md-button>
         </md-content>
       </md-tab>
+
     </md-tabs>
-  </md-content>
+</md-content>

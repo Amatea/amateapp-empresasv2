@@ -39,6 +39,20 @@ angular.module('huellas')
 .directive('chartsiembra', function() {
 		return {
 			restrict: 'E',
-			templateUrl: '/partials/chart-siembra.html',
+			templateUrl: '/partials/chart/chart-siembra.html',
+		};
+})
+
+.directive('chartsiembra2015', function() {
+		return {
+			restrict: 'E',
+			templateUrl: '/partials/chart/2015.html',
+		};
+})
+
+.directive('chartsiembra2016', function() {
+		return {
+			restrict: 'E',
+			templateUrl: '/partials/chart/2016.html',
 		};
 })
