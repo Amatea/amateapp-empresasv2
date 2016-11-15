@@ -11,9 +11,9 @@ var db = mongoose();
 var app = express();
 var passport = passport();
 
-app.listen(3001);
+app.listen(3000);
 
-console.log('Servidor ejecutándose en http://localhost:3001/');
+console.log('Servidor ejecutándose en http://localhost:3000/');
 
 module.exports = app;
 
