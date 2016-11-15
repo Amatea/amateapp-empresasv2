@@ -7,7 +7,7 @@ angular.module('huellas')
       $scope.series = ['Huella', 'Captura'];
       $scope.data = [
         [67632, 84650, 88202],
-        [471, 784, 0]
+        [58000, 70000, 72000]
       ];
       $scope.onClick = function (points, evt) {
         console.log(points, evt);
