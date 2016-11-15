@@ -13,9 +13,9 @@
         <h2><i class="fa fa-paw" aria-hidden="true"></i> EcoDesafío::</h2>
         <section layout-align="center center" layout="row">
           <div class="usuario-compensa">
-              <a  href=""><i class="material-icons md-48">account_circle</i></i></a>
-              <p class="compensa-nombre">Claudia</p>
-              <p class="compensa-ico"><i class="fa fa-envira" aria-hidden="true"></i> 13</p>
+            <a  href=""><img class="avatar" src="{{authentication.user.providerData.picture}}" alt=""></a>
+            <p class="compensa-nombre">{{authentication.user.firstName}}</p>
+            <p class="compensa-ico"><i class="fa fa-pagelines" aria-hidden="true"></i> {{authentication.user.totalTrees}}</p>
             </div>
         </section>
         <div>
